@@ -7,11 +7,15 @@ class TvShowModel {
   final String releaseDate;
   final double rating;
   final String pgRating;
+  final String posterImg;
+  final List<String> genre;
   final ContentCategoryType categoryType;
   final List<EpisodeModel> episodes;
 
   TvShowModel({
     required this.showName,
+    required this.posterImg,
+    required this.genre,
     required this.seasonCount,
     required this.releaseDate,
     required this.rating,
@@ -32,6 +36,8 @@ class TvShowModel {
       episodes: (json['episodes'] as List<dynamic>)
           .map((episode) => EpisodeModel.fromJson(episode))
           .toList(),
+      posterImg: json['posterimg'] ?? '',
+      genre: List<String>.from(json['genre']),
     );
   }
 }

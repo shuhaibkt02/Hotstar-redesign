@@ -46,12 +46,21 @@ class AppRouterConfig {
       GoRoute(
         path: '/moviePage',
         name: MoviePlay.movieContent,
-        builder: (context, state) => const MoviePlay(),
+        builder: (context, state) {
+          final extraData = state.extra as Map<String, dynamic>;
+          final movieName = extraData['movieName'] as String;
+
+          return MoviePlay(movieName: movieName);
+        },
       ),
       GoRoute(
         path: '/seriesPage',
         name: SeriesPlay.seriesPlay,
-        builder: (context, state) => const SeriesPlay(),
+        builder: (context, state) {
+          final extraData = state.extra as Map<String, dynamic>;
+          final serieName = extraData['tvName'] as String;
+          return SeriesPlay(seriesName: serieName);
+        },
       ),
     ],
     errorBuilder: (context, state) => Scaffold(

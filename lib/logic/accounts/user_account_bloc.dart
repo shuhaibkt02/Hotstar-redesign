@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:hotstar/data/model/user/user_accounts_model.dart';
-import 'package:hotstar/utils/test_db.dart';
+import 'package:hotstar/data/sample/sample_user.dart';
 
 part 'user_account_event.dart';
 part 'user_account_state.dart';

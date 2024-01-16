@@ -8,9 +8,9 @@ abstract class ContentModel {
   final String description;
   final String imageUrl;
   final String videoUrl;
-  final DateTime publishDate;
+  final String publishDate;
   final ContentCategoryType category;
-  final Duration length;
+  final double length;
   final PlayModel play;
 
   const ContentModel({

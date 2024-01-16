@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/data/model/content/tv_show_model.dart';
+import 'package:hotstar/data/sample/content_sample.dart';
 import 'package:hotstar/presentation/widgets/series/episode_card.dart';
 import 'package:hotstar/presentation/widgets/series/more_like_card.dart';
 import 'package:hotstar/presentation/widgets/series/poster_card.dart';
@@ -7,26 +9,28 @@ import 'package:hotstar/presentation/widgets/series/trailer_info.dart';
 import 'package:hotstar/utils/constant.dart';
 
 class SeriesPlay extends StatelessWidget {
-    static const String seriesPlay = 'seriesPlay';
+  static const String seriesPlay = 'seriesPlay';
+  final String seriesName;
 
-  const SeriesPlay({super.key});
+  const SeriesPlay({super.key, required this.seriesName});
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
-
+    TvShowModel seriesDetails = sampleTvShowList
+        .firstWhere((element) => element.showName == seriesName);
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const PosterCard(
-                bgUri: mandlorian,
+              PosterCard(
+                bgUri: seriesDetails.posterImg,
                 currentState: 'Resume',
               ),
-              const SemiInfoWidget(
-                year: '2019',
-                smallInfo: 'Season 2',
-                statusCode: 'PJ-13',
+              SemiInfoWidget(
+                year: seriesDetails.releaseDate,
+                smallInfo: 'Season ${seriesDetails.seasonCount}',
+                statusCode: seriesDetails.pgRating,
                 substitle: true,
                 resolution: '4K',
               ),
@@ -40,8 +44,8 @@ class SeriesPlay extends StatelessWidget {
                 child: EpisodeCard(
                   size: size,
                   seasonCount: 3,
-                  categories: const ['Space-western,', 'Action,', 'Adventure'],
-                  rating: 8.9,
+                  categories: seriesDetails.genre,
+                  rating: seriesDetails.rating,
                 ),
               ),
               Container(

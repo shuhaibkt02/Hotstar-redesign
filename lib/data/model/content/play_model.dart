@@ -1,6 +1,6 @@
 class PlayModel {
   final bool isPlay;
-  final String lastPlayedPostition;
+  final double lastPlayedPostition;
 
   const PlayModel({
     required this.isPlay,
@@ -10,7 +10,7 @@ class PlayModel {
   factory PlayModel.fromJson(Map<String, dynamic> json) {
     return PlayModel(
       isPlay: json['isPlay'] ?? false,
-      lastPlayedPostition: json['lastPlayedPosition'] ?? '0:00',
+      lastPlayedPostition: json['lastPlayedPosition'] ?? 0.0,
     );
   }
   Map<String, dynamic> toJson() {

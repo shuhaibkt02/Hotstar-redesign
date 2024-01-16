@@ -7,10 +7,9 @@ import 'package:hotstar/logic/accounts/user_account_bloc.dart';
 import 'package:hotstar/logic/provider/user_image_provider.dart';
 import 'package:hotstar/presentation/screen/category_screen.dart';
 import 'package:hotstar/presentation/screen/downloads_screen.dart';
-import 'package:hotstar/presentation/screen/series_screen.dart';
 import 'package:hotstar/presentation/widgets/error_page.dart';
 import 'package:hotstar/presentation/widgets/home/title_listview.dart';
-import 'package:hotstar/presentation/widgets/home/usre_account_profile.dart';
+import 'package:hotstar/presentation/widgets/home/user_account_profile.dart';
 import 'package:hotstar/presentation/widgets/navigation_head.dart';
 import 'package:hotstar/presentation/widgets/series/custom_icon_button.dart';
 import 'package:hotstar/utils/constant.dart';
@@ -82,25 +81,18 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   const TitleAndListView(
-                    isWatched: true,
                     title: 'Continue watching',
                     contentType: ContentCategoryType.movie,
                   ),
-                  TitleAndListView(
-                    isWatched: false,
+                  const TitleAndListView(
                     title: 'Latest Release',
                     contentType: ContentCategoryType.tvShow,
-                    playMando: () {
-                      GoRouter.of(context).pushNamed(SeriesPlay.seriesPlay);
-                    },
                   ),
                   const TitleAndListView(
-                    isWatched: false,
                     title: 'Popular Movies',
                     contentType: ContentCategoryType.movie,
                   ),
                   const TitleAndListView(
-                    isWatched: false,
                     title: 'Exclusive Movies',
                     contentType: ContentCategoryType.movie,
                   ),

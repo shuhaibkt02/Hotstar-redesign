@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hotstar/data/model/content/movie_model.dart';
+import 'package:hotstar/data/sample/content_sample.dart';
 import 'package:hotstar/presentation/widgets/movies/movie_info.dart';
 import 'package:hotstar/presentation/widgets/series/more_like_card.dart';
 import 'package:hotstar/presentation/widgets/series/poster_card.dart';
@@ -7,9 +9,13 @@ import 'package:hotstar/presentation/widgets/series/semi_info_text.dart';
 class MoviePlay extends StatelessWidget {
   static const String movieContent = 'movie';
 
-  const MoviePlay({super.key});
+  final String movieName;
+
+  const MoviePlay({super.key, required this.movieName});
   @override
   Widget build(BuildContext context) {
+    MovieModel movieDetail =
+        movieSampleList.firstWhere((element) => element.title == movieName);
     final size = MediaQuery.sizeOf(context);
 
     return Scaffold(
@@ -17,14 +23,14 @@ class MoviePlay extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const PosterCard(
-                bgUri: '',
+              PosterCard(
+                bgUri: movieDetail.imageUrl,
                 currentState: 'Play',
               ),
-              const SemiInfoWidget(
-                year: '1997',
-                smallInfo: '1h 28m',
-                statusCode: 'PJ-12',
+              SemiInfoWidget(
+                year: movieDetail.publishDate,
+                smallInfo: '${movieDetail.length.toInt()}m',
+                statusCode: '${movieDetail.pGRating}',
                 substitle: true,
                 resolution: 'HD',
               ),
@@ -36,12 +42,11 @@ class MoviePlay extends StatelessWidget {
                   color: Colors.white10,
                   borderRadius: BorderRadius.circular(34),
                 ),
-                child: const MovieInfoCard(
-                  title: 'Hercules',
-                  rating: 7.4,
-                  summery:
-                      'Hercules, son of Zeus, is turned a half-mortal by the evil Hades. After realizing his immortal heritage, he must to return to Mount Olympus',
-                  categories: ['Animation,', 'Muscial,', 'Action,', 'Comedy'],
+                child: MovieInfoCard(
+                  title: movieDetail.title,
+                  rating: movieDetail.rating,
+                  summery: movieDetail.description,
+                  categories: movieDetail.genre,
                   director: ['Tony Bancroft', 'Barry Cook'],
                   music: 'Jerry Goldsmith',
                   starring: [

@@ -32,7 +32,7 @@ class DownloadScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(vertical: 2.0, horizontal: 5),
+                      const EdgeInsets.symmetric(vertical: 5.0, horizontal: 5),
                   child: Text(
                     '12 Videos - 7.23GB',
                     style: Theme.of(context).textTheme.bodySmall,
@@ -54,13 +54,16 @@ class DownloadScreen extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButton: CustomIconButton(
-        noPadding: true,
-        onpress: () => context.pop(),
-        icon: Icons.close,
-        radius: 18,
-        iconSize: 18,
-        opacity: 0.4,
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(top: 8.0),
+        child: CustomIconButton(
+          noPadding: true,
+          onpress: () => context.pop(),
+          icon: Icons.close,
+          radius: 17,
+          iconSize: 17,
+          opacity: 0.4,
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.miniEndTop,
     );
@@ -110,7 +113,7 @@ class DownloadTile extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: Theme.of(context).textTheme.titleSmall,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                   const SizedBox(height: 5),
                   Text(

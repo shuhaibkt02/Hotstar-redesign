@@ -4,7 +4,7 @@ import 'package:hotstar/data/model/content/play_model.dart';
 class MovieModel extends ContentModel {
   final List<String> genre;
   final String? pGRating;
-  final String rating;
+  final double rating;
 
   const MovieModel(
     this.pGRating, {
