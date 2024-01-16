@@ -4,8 +4,8 @@ import 'package:hotstar/data/model/content/content_model.dart';
 import 'package:hotstar/data/model/content/movie_model.dart';
 import 'package:hotstar/data/model/content/tv_show_model.dart';
 import 'package:hotstar/data/sample/content_sample.dart';
-import 'package:hotstar/presentation/screen/movie_screen.dart';
-import 'package:hotstar/presentation/screen/series_screen.dart';
+import 'package:hotstar/presentation/screen/movie_play.dart';
+import 'package:hotstar/presentation/screen/series_play.dart';
 
 class TitleAndListView extends StatelessWidget {
   final String title;

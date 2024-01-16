@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hotstar/presentation/screen/downloads_screen.dart';
-import 'package:hotstar/presentation/screen/movie_screen.dart';
-import 'package:hotstar/presentation/screen/series_screen.dart';
+import 'package:hotstar/presentation/screen/studio_screen.dart';
 import 'package:hotstar/presentation/widgets/series/custom_icon_button.dart';
 
 class CategoryScreen extends StatelessWidget {
@@ -31,20 +30,25 @@ class CategoryScreen extends StatelessWidget {
                 CustomElevationButton(
                   icon: Icons.movie_outlined,
                   onpress: () {
-                    GoRouter.of(context).pushNamed(MoviePlay.movieContent);
+                    GoRouter.of(context).pushNamed(StudioScreen.studioPage,
+                        extra: {'studioName': 'Movies'});
                   },
                   label: 'Movies',
                 ),
                 CustomElevationButton(
                   icon: Icons.tv,
                   onpress: () {
-                    GoRouter.of(context).pushNamed(SeriesPlay.seriesPlay);
+                    GoRouter.of(context).pushNamed(StudioScreen.studioPage,
+                        extra: {'studioName': 'Series'});
                   },
                   label: 'Shows',
                 ),
                 CustomElevationButton(
                   icon: Icons.done,
-                  onpress: () {},
+                  onpress: () {
+                    GoRouter.of(context).pushNamed(StudioScreen.studioPage,
+                        extra: {'studioName': 'Watch list'});
+                  },
                   label: 'Watchlist',
                 ),
                 CustomElevationButton(
@@ -56,11 +60,26 @@ class CategoryScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 ...List.generate(
-                  8,
-                  (index) => Container(
-                    height: 50,
-                    margin: const EdgeInsets.symmetric(vertical: 8),
-                    color: Colors.green.shade900,
+                  5,
+                  (index) => InkWell(
+                    onTap: () {
+                      GoRouter.of(context).pushNamed(StudioScreen.studioPage,
+                          extra: {'studioName': 'Studio ${index + 1}'});
+                    },
+                    child: Container(
+                      height: 50,
+                      width: 200,
+                      margin: const EdgeInsets.symmetric(vertical: 8),
+                      decoration: BoxDecoration(
+                          color: Colors.grey.shade900,
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20))),
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Studio ${index + 1}',
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
+                    ),
                   ),
                 )
               ],

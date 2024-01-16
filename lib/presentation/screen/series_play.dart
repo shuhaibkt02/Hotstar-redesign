@@ -6,7 +6,6 @@ import 'package:hotstar/presentation/widgets/series/more_like_card.dart';
 import 'package:hotstar/presentation/widgets/series/poster_card.dart';
 import 'package:hotstar/presentation/widgets/series/semi_info_text.dart';
 import 'package:hotstar/presentation/widgets/series/trailer_info.dart';
-import 'package:hotstar/utils/constant.dart';
 
 class SeriesPlay extends StatelessWidget {
   static const String seriesPlay = 'seriesPlay';

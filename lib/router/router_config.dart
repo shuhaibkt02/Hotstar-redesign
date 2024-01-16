@@ -5,8 +5,9 @@ import 'package:hotstar/presentation/screen/category_screen.dart';
 import 'package:hotstar/presentation/screen/downloads_screen.dart';
 import 'package:hotstar/presentation/screen/entry_screen.dart';
 import 'package:hotstar/presentation/screen/home_screen.dart';
-import 'package:hotstar/presentation/screen/movie_screen.dart';
-import 'package:hotstar/presentation/screen/series_screen.dart';
+import 'package:hotstar/presentation/screen/movie_play.dart';
+import 'package:hotstar/presentation/screen/series_play.dart';
+import 'package:hotstar/presentation/screen/studio_screen.dart';
 
 class AppRouterConfig {
   static final GoRouter router = GoRouter(
@@ -42,6 +43,15 @@ class AppRouterConfig {
         path: '/downloadPage',
         name: DownloadScreen.download,
         builder: (context, state) => const DownloadScreen(),
+      ),
+      GoRoute(
+        path: '/studioPage',
+        name: StudioScreen.studioPage,
+        builder: (context, state) {
+          final extraData = state.extra as Map<String, dynamic>;
+          final studioLabel = extraData['studioName'] as String;
+          return StudioScreen(studioName: studioLabel);
+        },
       ),
       GoRoute(
         path: '/moviePage',
