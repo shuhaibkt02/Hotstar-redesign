@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hotstar/presentation/widgets/navigation_head.dart';
 import 'package:hotstar/presentation/widgets/series/custom_icon_button.dart';
-import 'package:hotstar/presentation/widgets/series/custom_snack_bar.dart';
 
 class StudioScreen extends StatelessWidget {
   static const String studioPage = 'sudioPage';
