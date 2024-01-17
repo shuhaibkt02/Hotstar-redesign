@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hotstar/data/model/content/content_model.dart';
 import 'package:hotstar/data/model/user/user_accounts_model.dart';
 
 const mandlorian = 'assets/images/mandlorian.jpg';
@@ -79,22 +78,4 @@ Map<UserMood, List<String>> moodImageMap = {
 
 List<String> getList(UserMood mood) {
   return moodImageMap[mood] ?? [];
-}
-
-Map<ContentCategoryType, List<String>> contentPoster = {
-  ContentCategoryType.movie: [
-    'assets/images/12th_fail.jpg',
-    'assets/images/hercules.jpg',
-    'assets/images/kannur_squad.jpg',
-    'assets/images/wall-e.jpg',
-  ],
-  ContentCategoryType.tvShow: [
-    'assets/images/mandalorian.jpg',
-    'assets/images/what_if.jpg',
-    'assets/images/iam_groot.jpg',
-  ],
-};
-
-List<String> getContentList({required ContentCategoryType contentType}) {
-  return contentPoster[contentType] ?? [];
 }

@@ -57,6 +57,7 @@ class _PosterCardState extends State<PosterCard> {
         alwaysShowThumbnailOnVideoPaused: true,
         showDurationPlayed: true,
         showDurationRemaining: true,
+        enterFullscreenOnStart: true,
       ),
       context: context,
       videoPlayerController: videoPlayerController,

@@ -8,6 +8,7 @@ import 'package:hotstar/presentation/screen/home_screen.dart';
 import 'package:hotstar/presentation/screen/movie_play.dart';
 import 'package:hotstar/presentation/screen/series_play.dart';
 import 'package:hotstar/presentation/screen/studio_screen.dart';
+import 'package:hotstar/presentation/widgets/error_page.dart';
 
 class AppRouterConfig {
   static final GoRouter router = GoRouter(
@@ -73,12 +74,7 @@ class AppRouterConfig {
         },
       ),
     ],
-    errorBuilder: (context, state) => Scaffold(
-      body: Container(
-        color: Colors.green.shade200,
-        alignment: Alignment.center,
-        child: Text('${state.error}'),
-      ),
-    ),
+    errorBuilder: (context, state) =>
+        Scaffold(body: ErrorPage(errorMsg: '${state.error}')),
   );
 }
