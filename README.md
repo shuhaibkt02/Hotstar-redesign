@@ -1,16 +1,25 @@
-# hotstar_new
+# Disney Hotstar Redesign
 
-A new Flutter project.
+![ic_launcher](https://github.com/shuhaibkt02/Hotstar-redesign/assets/111732518/db4e64a5-bbd9-46f3-b539-324702564e9f)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Overview
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Welcome to the Disney Hotstar Redesign project! This initiative aims to enhance the user experience and visual appeal of the Disney Hotstar streaming platform. Our team is dedicated to creating a modern and intuitive design that caters to the preferences of users while maintaining the essence of the original Hotstar brand.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Features
+
+- **Modern Design:** Enjoy a fresh and contemporary visual interface that enhances the overall viewing experience.
+- **Intuitive Navigation:** Effortlessly explore content with a redesigned navigation system, making it easier to find your favorite shows and movies.
+- **Personalized Recommendations:** Get tailored content recommendations based on your viewing history and preferences.
+- **Responsive Layout:** Experience the redesign seamlessly across various devices, ensuring a consistent and enjoyable user journey.
+
+## Screenshots
+![Screenshot_1](https://github.com/shuhaibkt02/Hotstar-redesign/assets/111732518/ca4b0981-42c4-4cd2-bc37-c3b35a1cc172)   ![Screenshot_2](https://github.com/shuhaibkt02/Hotstar-redesign/assets/111732518/b2486f42-8a80-45c1-a249-23963a0d6379)
+
+
+
+
+#Design 
+https://www.behance.net/gallery/141700011/Disney-But-Better
