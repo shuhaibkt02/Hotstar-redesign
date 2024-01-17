@@ -16,7 +16,7 @@ Welcome to the Disney Hotstar Redesign project! This initiative aims to enhance 
 - **Responsive Layout:** Experience the redesign seamlessly across various devices, ensuring a consistent and enjoyable user journey.
 
 ## Screenshots
-![Screenshot_1](https://github.com/shuhaibkt02/Hotstar-redesign/assets/111732518/ca4b0981-42c4-4cd2-bc37-c3b35a1cc172)   ![Screenshot_2](https://github.com/shuhaibkt02/Hotstar-redesign/assets/111732518/b2486f42-8a80-45c1-a249-23963a0d6379)
+![Screenshot_1](https://github.com/shuhaibkt02/Hotstar-redesign/assets/111732518/ca4b0981-42c4-4cd2-bc37-c3b35a1cc172)  ![Screenshot_2](https://github.com/shuhaibkt02/Hotstar-redesign/assets/111732518/b2486f42-8a80-45c1-a249-23963a0d6379)
 
 
 
