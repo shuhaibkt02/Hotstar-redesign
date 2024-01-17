@@ -44,11 +44,20 @@ class _PosterCardState extends State<PosterCard> {
   void intiVideo() {
     VideoPlayerController videoPlayerController;
 
-    videoPlayerController = VideoPlayerController.networkUrl(videoUrl)
-      ..initialize().then((value) {
+    videoPlayerController = VideoPlayerController.networkUrl(
+      videoUrl,
+    )..initialize().then((value) {
         setState(() {});
       });
     _customVideoPlayerController = CustomVideoPlayerController(
+      customVideoPlayerSettings: const CustomVideoPlayerSettings(
+        seekDuration: Duration(seconds: 5),
+        showSeekButtons: true,
+        showPlayButton: true,
+        alwaysShowThumbnailOnVideoPaused: true,
+        showDurationPlayed: true,
+        showDurationRemaining: true,
+      ),
       context: context,
       videoPlayerController: videoPlayerController,
     );
