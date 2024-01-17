@@ -25,7 +25,7 @@ class MoviePlay extends StatelessWidget {
             children: [
               PosterCard(
                 bgUri: movieDetail.imageUrl,
-                currentState: 'Play',
+                currentState: movieDetail.play,
               ),
               SemiInfoWidget(
                 year: movieDetail.publishDate,

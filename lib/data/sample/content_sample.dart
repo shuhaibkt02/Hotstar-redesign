@@ -117,7 +117,7 @@ List<TvShowModel> sampleTvShowList = [
 ];
 
 Future<List> getContentList({required ContentCategoryType contentType}) async {
-  await Future.delayed(const Duration(seconds: 1));
+  await Future.delayed(const Duration(microseconds: 780));
   return (contentType == ContentCategoryType.movie)
       ? movieSampleList
       : sampleTvShowList;

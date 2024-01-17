@@ -37,6 +37,7 @@ class MainApp extends StatelessWidget {
                 bodySmall: bodySmall,
                 titleMedium: titleMedium,
                 titleSmall: titleSmall,
+                headlineSmall: headLineSmall,
               ),
               fontFamily: 'SFProDisplay',
             ),

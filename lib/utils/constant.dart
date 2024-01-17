@@ -7,6 +7,14 @@ const disneyLogo = 'assets/images/616.png';
 const episodeDetails =
     'In the lawless aftermath of the collapse of the Galactic Empire, an armored bounty hunter takes on a well-paying yet cryptic assignment .';
 
+TextStyle headLineSmall = TextStyle(
+  fontFamily: 'SFProDisplay',
+  fontWeight: FontWeight.bold,
+  color: Colors.grey.shade300,
+  fontSize: 19,
+  letterSpacing: 0.9,
+);
+
 TextStyle titleLarge = TextStyle(
   fontSize: 30,
   color: Colors.grey.shade300,

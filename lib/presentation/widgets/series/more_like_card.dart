@@ -33,13 +33,7 @@ class _MoreLikeCardState extends State<MoreLikeCard> {
                     const EdgeInsets.symmetric(horizontal: 18.0, vertical: 24),
                 child: Text(
                   'More like this',
-                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                        fontFamily: 'SFProDisplay',
-                        fontWeight: FontWeight.bold,
-                        color: Colors.grey.shade300,
-                        fontSize: 19,
-                        letterSpacing: 0.9,
-                      ),
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
               ),
               Expanded(

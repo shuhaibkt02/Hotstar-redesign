@@ -30,7 +30,7 @@ List<UserModel> sampleUserList = [
         mood: UserMood.happy,
       ),
       UserAccountModel(
-        userName: 'Raju',
+        userName: 'Anna',
         avatarImg: 'assets/avatar/jessie.jpeg',
         mood: UserMood.angry,
       ),

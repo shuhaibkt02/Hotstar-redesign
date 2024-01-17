@@ -34,13 +34,7 @@ class MovieInfoCard extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                        fontFamily: 'SFProDisplay',
-                        fontWeight: FontWeight.bold,
-                        color: Colors.grey.shade300,
-                        fontSize: 19,
-                        letterSpacing: 0.9,
-                      ),
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
                 const SizedBox(width: 10),
                 const Icon(
@@ -50,10 +44,7 @@ class MovieInfoCard extends StatelessWidget {
                 const SizedBox(width: 5),
                 Text(
                   '$rating',
-                  style: TextStyle(
-                    color: Colors.grey.shade400,
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: Theme.of(context).textTheme.headlineSmall,
                 )
               ],
             ),
@@ -63,16 +54,9 @@ class MovieInfoCard extends StatelessWidget {
               vertical: 5.0,
               horizontal: 20,
             ),
-            child: Text(
-              summery,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 13.5,
-                fontFamily: 'SFProDisplay',
-                color: Colors.grey.shade400,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
+            child: Text(summery,
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.bodyMedium),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -80,16 +64,17 @@ class MovieInfoCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
-                ...List.generate(
-                  categories.length,
-                  (index) => Text(
-                    ' ${categories[index]} ',
-                    style: TextStyle(
-                      color: Colors.grey.shade600,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 13.7,
-                    ),
-                  ),
+                Text(
+                  List.generate(
+                    categories.length,
+                    (index) =>
+                        '${categories[index]}${index < categories.length - 1 ? ' - ' : ''}',
+                  ).join(),
+                  textAlign: TextAlign.start,
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodySmall
+                      ?.copyWith(fontSize: 12),
                 ),
               ],
             ),

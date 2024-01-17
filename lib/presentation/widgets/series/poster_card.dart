@@ -1,12 +1,15 @@
+import 'dart:io';
+
 import 'package:appinio_video_player/appinio_video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hotstar/data/model/content/play_model.dart';
 import 'package:hotstar/presentation/widgets/series/custom_icon_button.dart';
 import 'package:hotstar/presentation/widgets/series/custom_snack_bar.dart';
 
 class PosterCard extends StatefulWidget {
   final String bgUri;
-  final String currentState;
+  final PlayModel currentState;
   const PosterCard({
     super.key,
     required this.bgUri,
@@ -76,11 +79,15 @@ class _PosterCardState extends State<PosterCard> {
           : Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CustomIconButton(
-                  onpress: () {
-                    context.pop();
-                  },
-                  icon: Icons.close,
+                Stack(
+                  children: [
+                    CustomIconButton(
+                      onpress: () {
+                        context.pop();
+                      },
+                      icon: Icons.close,
+                    ),
+                  ],
                 ),
                 Row(
                   children: [
@@ -93,11 +100,16 @@ class _PosterCardState extends State<PosterCard> {
                         borderRadius: BorderRadius.circular(25),
                       ),
                       child: PlayButton(
-                        stateIs: isPlaying ? 'resume' : 'play',
+                        stateIs: widget.currentState.isPlay ? 'Resume' : 'Play',
                         onpress: () {
-                          setState(() {
-                            isPlaying = true;
-                          });
+                          if (Platform.isWindows) {
+                            snackBarCall(
+                                context: context, message: 'Not config');
+                          } else {
+                            setState(() {
+                              isPlaying = true;
+                            });
+                          }
                         },
                       ),
                     ),

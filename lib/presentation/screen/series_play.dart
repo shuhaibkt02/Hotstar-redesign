@@ -24,7 +24,7 @@ class SeriesPlay extends StatelessWidget {
             children: [
               PosterCard(
                 bgUri: seriesDetails.posterImg,
-                currentState: 'Resume',
+                currentState: seriesDetails.episodes[0].play,
               ),
               SemiInfoWidget(
                 year: seriesDetails.releaseDate,
