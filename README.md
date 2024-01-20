@@ -6,7 +6,7 @@
 
 ## Overview
 
-Welcome to the Disney Hotstar Redesign project! This initiative aims to enhance the user experience and visual appeal of the Disney Hotstar streaming platform. Our team is dedicated to creating a modern and intuitive design that caters to the preferences of users while maintaining the essence of the original Hotstar brand.
+Welcome to the Disney Hotstar Redesign project! This initiative aims to enhance the user experience and visual appeal of the Disney Hotstar streaming platform. I dedicated to creating a modern and intuitive design that caters to the preferences of users while maintaining the essence of the original Hotstar brand.
 
 ## Features
 
